@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Image from "next/image";
 
 const items = [
-  { title: "LOUNGE", src: "/assets/lounge.png" },
+  { title: "LOUNGE", src: "/assets/lounges.png" },
   { title: "DOCES FINOS", src: "/assets/doce.png" },
   { title: "PRESSKIT CONVIDADOS", src: "/assets/kit.jpeg" },
   { title: "CARPETAGEM", src: "/assets/carpete.jpeg" },
