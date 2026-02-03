@@ -4,9 +4,9 @@ export default function BarSection() {
   return (
     <section className="relative min-h-screen bg-[#F5F5F5] flex flex-col lg:flex-row items-center py-16 md:py-24 px-8 md:px-24 overflow-hidden">
       
-      {/* Container da Logo: Ajustado para Mobile */}
-      <div className="flex justify-end w-full mb-8 md:mb-0 md:absolute md:top-10 md:right-10 z-20">
-        <div className="w-20 md:w-28">
+      {/* CONTAINER DA LOGO: Centralizado no Mobile, Absoluto à direita no Desktop */}
+      <div className="flex justify-center md:justify-end w-full mb-10 md:mb-0 md:absolute md:top-10 md:right-10 z-20">
+        <div className="w-24 md:w-28">
           <Image 
             src="/assets/logo.png" 
             alt="Riquíssimos" 
@@ -32,7 +32,7 @@ export default function BarSection() {
         </div>
 
         {/* Coluna da Direita: Conteúdo */}
-        <div className="space-y-8 z-10">
+        <div className="space-y-8 z-10 text-center md:text-left">
           <header className="space-y-8">
             <h2 className="font-display italic font-normal text-6xl md:text-8xl text-[#1A1A1A] tracking-tighter leading-none">
               Bar de Luxo
@@ -48,7 +48,7 @@ export default function BarSection() {
                 inteiramente pensado dentro da direção criativa da Júlia, com fundo personalizado, 
                 estampas exclusivas, monograma e identidade visual alinhados ao conceito da festa.
               </p>
-              <p className="text-base md:text-lg opacity-80 border-l-2 border-black/10 pl-6 italic">
+              <p className="text-base md:text-lg opacity-80 border-l-2 border-black/10 pl-6 italic text-left">
                 Toda a produção, decoração e operação do bar serão de responsabilidade da 
                 Riquíssimos Produções, garantindo alto padrão em cada detalhe.
               </p>

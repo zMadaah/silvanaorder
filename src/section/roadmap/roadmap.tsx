@@ -13,8 +13,8 @@ export default function Roadmap() {
           <Image 
             src="/assets/logo.png" 
             alt="Riquíssimos" 
-            width={110} 
-            height={110} 
+            width={90} 
+            height={90} 
             className="object-contain"
           />
         </div>
@@ -39,12 +39,7 @@ export default function Roadmap() {
         </div>
       </div>
 
-      {/* Marca d'água decorativa sutil */}
-      <div className="absolute right-[-40px] bottom-20 rotate-90 opacity-[0.02] select-none pointer-events-none hidden lg:block">
-        <span className="font-display italic text-9xl tracking-widest uppercase text-black">
-          Process
-        </span>
-      </div>
+      
     </section>
   );
 }

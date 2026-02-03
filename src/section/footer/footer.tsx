@@ -27,11 +27,11 @@ export default function Footer() {
           />
         </div>
 
-        {/* BOTÃO DE DOWNLOAD PDF - Estilo Soft Violet */}
+        {/* BOTÃO DE DOWNLOAD PDF - Estilo Refinado */}
         <a 
-          href="/assets/propostajuilia.pdf" // Certifique-se de colocar o arquivo PDF nesta pasta
+          href="/assets/propostajulia.pdf" 
           download="Proposta_Julia_XV.pdf"
-          className="group flex items-center gap-3 bg-[#99999] hover:bg-[#b3b3b3] text-white px-8 py-4 rounded-full font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-xl active:scale-95 border border-white/10"
+          className="group flex items-center gap-3 bg-[#a3779d] hover:bg-[#8e6087] text-white px-8 py-4 rounded-full font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-xl active:scale-95 border border-white/10"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -69,8 +69,8 @@ export default function Footer() {
         </nav>
 
         {/* 4. Copyright e Créditos */}
-        <div className="w-full pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="font-sans text-[8px] uppercase tracking-[0.3em] opacity-40 text-center md:text-left leading-relaxed">
+        <div className="w-full pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+          <p className="font-sans text-[8px] uppercase tracking-[0.3em] opacity-40 leading-relaxed">
             © {currentYear} Riquíssimos Maison Experience. <br className="md:hidden" /> Todos os direitos reservados.
           </p>
           <p className="font-sans text-[8px] uppercase tracking-[0.3em] opacity-40">
