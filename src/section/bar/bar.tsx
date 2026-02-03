@@ -22,7 +22,7 @@ export default function BarSection() {
         {/* Coluna da Esquerda: Imagem */}
         <div className="relative h-[400px] md:h-[600px] lg:h-[800px] w-full rounded-[40px] overflow-hidden shadow-2xl border border-black/5">
           <Image 
-            src="/assets/bar.png"
+            src="/assets/bar.PNG"
             alt="Cenografia Bar de Luxo"
             fill
             className="object-cover hover:scale-105 transition-transform duration-700"

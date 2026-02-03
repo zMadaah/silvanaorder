@@ -17,7 +17,7 @@ export default function LoungeSection() {
         {/* Coluna da Esquerda: Imagem do Lounge */}
         <div className="relative h-[500px] md:h-[700px] w-full rounded-[40px] overflow-hidden shadow-2xl border border-black/5 order-2 lg:order-1">
           <Image 
-            src="/assets/lounges.png" // Certifique-se de ter esta imagem na pasta public/assets
+             src="/assets/espaco.PNG"  // Certifique-se de ter esta imagem na pasta public/assets
             alt="Cenografia de Lounge Luxuosa"
             fill
             className="object-cover hover:scale-105 transition-transform duration-700"
