@@ -29,7 +29,7 @@ export default function Footer() {
 
         {/* BOTÃO DE DOWNLOAD PDF - Estilo Soft Violet */}
         <a 
-          href="/assets/propostajulia.pdf" // Certifique-se de colocar o arquivo PDF nesta pasta
+          href="/assets/propostajuilia.pdf" // Certifique-se de colocar o arquivo PDF nesta pasta
           download="Proposta_Julia_XV.pdf"
           className="group flex items-center gap-3 bg-[#99999] hover:bg-[#b3b3b3] text-white px-8 py-4 rounded-full font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-xl active:scale-95 border border-white/10"
         >
