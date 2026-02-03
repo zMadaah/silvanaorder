@@ -15,11 +15,11 @@ export default function Hero() {
       {/* Background de Imagem com Filtro Preto e Branco */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/bg_hero.jpg" // Substitua pelo caminho correto da sua imagem
+          src="/assets/bg_hero.png" // Substitua pelo caminho correto da sua imagem
           alt="Background"
           fill
           priority
-          className="object-cover grayscale brightness-50" // grayscale transforma em P&B e brightness-50 escurece para dar leitura
+          // className="object-cover grayscale brightness-50" // grayscale transforma em P&B e brightness-50 escurece para dar leitura
         />
       </div>
 

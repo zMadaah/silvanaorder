@@ -6,7 +6,7 @@ export function StepCard({ step }: { step: Step }) {
     <div className="group relative bg-[#666666] p-8 rounded-[30px] shadow-xl hover:scale-105 transition-all duration-300 border border-white/10 flex flex-col justify-between min-h-[300px]">
       
       {/* Número do Passo em destaque */}
-      <div className="absolute top-6 right-8 text-white/20 font-display italic text-6xl group-hover:text-white/40 transition-colors">
+      <div className="absolute top-6 right-8 text-white/20 font-display italic text-5xl group-hover:text-white/40 transition-colors">
         {step.number}
       </div>
 

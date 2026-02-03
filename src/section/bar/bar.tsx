@@ -5,17 +5,7 @@ export default function BarSection() {
     <section className="relative min-h-screen bg-[#F5F5F5] flex flex-col lg:flex-row items-center py-16 md:py-24 px-8 md:px-24 overflow-hidden">
       
       {/* CONTAINER DA LOGO: Centralizado no Mobile, Absoluto à direita no Desktop */}
-      <div className="flex justify-center md:justify-end w-full mb-10 md:mb-0 md:absolute md:top-10 md:right-10 z-20">
-        <div className="w-24 md:w-28">
-          <Image 
-            src="/assets/logo.png" 
-            alt="Riquíssimos" 
-            width={110} 
-            height={110} 
-            className="object-contain"
-          />
-        </div>
-      </div>
+     
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         

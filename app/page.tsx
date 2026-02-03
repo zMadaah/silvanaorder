@@ -24,7 +24,7 @@ export default function Home() {
       <Hero /> 
       <Order />          
       <Roadmap />        
-      <Branding />       
+      {/* <Branding />        */}
       <Decoracao />      
       <Candy />          
       <Presskit />       

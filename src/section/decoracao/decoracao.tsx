@@ -22,61 +22,82 @@ export default function DecoracaoSection() {
 
   return (
     <section className="relative min-h-screen bg-[#F5F5F5] py-16 md:py-24 px-6 md:px-24 text-[#1A1A1A]">
-      
-      {/* AJUSTE LOGO: Centralizada no mobile (flex justify-center), Absoluta no desktop */}
-      <div className="flex justify-center md:justify-end w-full mb-10 md:mb-0 md:absolute md:top-10 md:right-10 z-20">
-        <div className="w-24 md:w-28">
-          <Image 
-            src="/assets/logo.png" 
-            alt="Riquíssimos" 
-            width={110} 
-            height={110} 
-            className="object-contain"
-          />
-        </div>
-      </div>
-
       <div className="max-w-7xl mx-auto">
-        {/* AJUSTE CABEÇALHO: Alinhamento centralizado no mobile (text-center) */}
-        <header className="max-w-3xl mb-12 md:mb-16 text-center md:text-left mx-auto md:mx-0">
-          <h2 className="font-display italic font-normal text-6xl md:text-8xl mb-8 tracking-tighter">
+        {/* TÍTULO NO TOPO */}
+        <header className="max-w-3xl mb-8 md:mb-12 text-center mx-auto">
+          <h2 className="font-display italic font-normal text-6xl md:text-8xl mb-6 md:mb-8 tracking-tighter">
             Decoração
           </h2>
-          <div className="space-y-6 font-sans text-lg md:text-xl leading-relaxed opacity-90">
+        </header>
+
+        {/* CONTEÚDO PRINCIPAL: Estrutura diferente para mobile vs desktop */}
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-16 mb-16 md:mb-24">
+          {/* MOBILE: Imagem entre título e texto */}
+          <div className="lg:hidden mb-8">
+            <div className="relative h-[400px] w-full rounded-[40px] overflow-hidden shadow-2xl border border-black/5">
+              <Image
+                src="/assets/decoracao.PNG"
+                alt="Exibição de Decoração do Evento"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-700"
+                priority
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+            </div>
+          </div>
+
+          {/* DESKTOP: Coluna Esquerda - Descrição */}
+          <div className="space-y-6 font-sans text-lg md:text-xl leading-relaxed opacity-90 order-2 lg:order-1">
             <p>
-              A decoração do evento será desenvolvida de forma integral, criando uma experiência visual impactante, 
+              A decoração do evento será desenvolvida de forma integral, criando uma experiência visual impactante,
               luxuosa e totalmente personalizada em todos os ambientes.
             </p>
             <p className="opacity-80">
-              Todo o projeto seguirá a direção criativa do evento, unindo cenografia, produção floral, 
+              Todo o projeto seguirá a direção criativa do evento, unindo cenografia, produção floral,
               iluminação e identidade visual para surpreender os convidados do início ao fim.
             </p>
           </div>
-        </header>
 
-        <h3 className="font-sans font-black text-sm uppercase tracking-[0.2em] mb-10 border-b border-black/10 pb-4 text-center md:text-left">
-          Itens Inclusos na Decoração:
-        </h3>
+          {/* DESKTOP: Coluna Direita - Imagem (alinhada à direita) */}
+          <div className="hidden lg:block relative h-[500px] lg:h-[600px] w-full rounded-[40px] overflow-hidden shadow-2xl border border-black/5 order-1 lg:order-2">
+            <Image
+              src="/assets/decoracao.PNG"
+              alt="Exibição de Decoração do Evento"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-700"
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+          </div>
+        </div>
 
-        {/* Listas: Mantendo o alinhamento à esquerda para facilitar a leitura dos itens */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-3">
-          <ul className="space-y-3">
-            {itensEsquerda.map((item, idx) => (
-              <li key={idx} className="flex items-start font-sans text-sm md:text-base opacity-85 leading-tight text-left">
-                <span className="mr-3 text-[#B89B5E]">•</span>
-                {item}
-              </li>
-            ))}
-          </ul>
-          
-          <ul className="space-y-3">
-            {itensDireita.map((item, idx) => (
-              <li key={idx} className="flex items-start font-sans text-sm md:text-base opacity-85 leading-tight text-left">
-                <span className="mr-3 text-[#B89B5E]">•</span>
-                {item}
-              </li>
-            ))}
-          </ul>
+        {/* LISTA DE ITENS EM 2 COLUNAS ABAIXO DE TUDO */}
+        <div className="mt-8">
+          <h3 className="font-sans font-black text-sm uppercase tracking-[0.2em] mb-10 border-b border-black/10 pb-4 text-center md:text-left">
+            Itens Inclusos na Decoração:
+          </h3>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-3">
+            <ul className="space-y-3">
+              {itensEsquerda.map((item, idx) => (
+                <li key={idx} className="flex items-start font-sans text-sm md:text-base opacity-85 leading-tight text-left">
+                  <span className="mr-3 text-[#B89B5E]">•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            <ul className="space-y-3">
+              {itensDireita.map((item, idx) => (
+                <li key={idx} className="flex items-start font-sans text-sm md:text-base opacity-85 leading-tight text-left">
+                  <span className="mr-3 text-[#B89B5E]">•</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 

@@ -27,7 +27,7 @@ export default function Footer() {
           />
         </div>
 
-        {/* BOTÃO DE DOWNLOAD PDF - Estilo Refinado */}
+        {/* BOTÃO DE DOWNLOAD PDF */}
         <a 
           href="/assets/propostajulia.pdf" 
           download="Proposta_Julia_XV.pdf"

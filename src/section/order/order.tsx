@@ -22,10 +22,10 @@ export default function Order() {
         {/* CABEÇALHO: Centralizado no Mobile para acompanhar a logo */}
         <header className="border-b border-black/10 pb-10 text-center md:text-left">
           <h1 className="font-display italic font-normal text-6xl md:text-8xl tracking-tighter mb-4">
-            Proposta Silvana
+            Proposta
           </h1>
           <p className="font-sans font-bold text-[10px] md:text-sm uppercase tracking-[0.25em] opacity-80">
-            Aniversário da filha de 15 anos
+            Festa de 15 anos
           </p>
         </header>
 

@@ -5,17 +5,7 @@ export default function LoungeSection() {
     <section className="relative min-h-screen bg-[#F5F5F5] flex flex-col items-center py-16 md:py-24 px-8 md:px-24 overflow-hidden">
       
       {/* CONTAINER DA LOGO: Centralizado no Mobile, Absoluto no Desktop */}
-      <div className="flex justify-center md:justify-end w-full mb-10 md:mb-0 md:absolute md:top-10 md:right-10 z-20">
-        <div className="w-24 md:w-28">
-          <Image 
-            src="/assets/logo.png" 
-            alt="Riquíssimos" 
-            width={110} 
-            height={110} 
-            className="object-contain"
-          />
-        </div>
-      </div>
+      
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         
@@ -39,14 +29,7 @@ export default function LoungeSection() {
                 Lounge
               </h2>
               {/* Ícone ao lado do título (fica abaixo do título no mobile para manter o eixo central) */}
-              <div className="w-12 h-12 md:w-16 md:h-16 relative">
-                <Image 
-                  src="/assets/logo.png"  
-                  alt="Icone Riquíssimos" 
-                  fill 
-                  className="object-contain opacity-90"
-                />
-              </div>
+             
             </div>
 
             <div className="space-y-6 font-sans text-lg md:text-xl leading-relaxed text-[#1A1A1A] opacity-90 text-pretty">

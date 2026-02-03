@@ -8,8 +8,8 @@ export interface Step {
 export const steps: Step[] = [
   {
     number: 1,
-    title: "A Chegada da Golden Box (Start Oficial)",
-    content: "Entre 25 a 30 dias após o fechamento do contrato, você recebe em casa a Golden Box. Ela marca o início da nossa jornada e contém o seu presente exclusivo — a corrente de ouro — e o iPad de Gestão, que será sua ferramenta principal de acompanhamento."
+    title: "Golden Box",
+    content: "Entre 25 a 30 dias após o fechamento do contrato, você recebe em casa a Golden Box. Ela marca o início da nossa jornada e contém o seu presente exclusivo e o iPad de Gestão, que será sua ferramenta principal de acompanhamento."
   },
   {
     number: 2,
@@ -18,7 +18,7 @@ export const steps: Step[] = [
   },
   {
     number: 3,
-    title: "O Branding (Identidade Visual)",
+    title: "O Branding ",
     content: "Desenvolvimento da marca exclusiva da festa. Aqui criamos o monograma, selecionamos a tipografia e definimos toda a identidade visual que estará presente em todos os materiais, desde os convites até a pista de dança."
   },
   {
@@ -28,12 +28,12 @@ export const steps: Step[] = [
   },
   {
     number: 5,
-    title: "Arquitetura e Cenografia (Layout & 3D)",
+    title: "Arquitetura e Cenografia ",
     content: "A materialização visual do projeto. Desenvolvemos a planta baixa e as visualizações em 3D para que você consiga visualizar exatamente como cada ambiente será montado e como os convidados irão interagir com o espaço."
   },
   {
     number: 6,
-    title: "Curadoria Gastronômica (Degustação)",
+    title: "Curadoria Gastronômica ",
     content: "Momento de definir os sabores e a estética da mesa de doces. Realizamos a degustação completa e a escolha criteriosa dos doces, forminhas luxuosas e os bem-vividos que comporão o cenário gastronômico."
   },
   {
@@ -43,7 +43,7 @@ export const steps: Step[] = [
   },
   {
     number: 8,
-    title: "Detalhes Finais (Mimos & Experience)",
+    title: "Detalhes Finais",
     content: "Confecção e produção de todos os itens de experiência do convidado. Produzimos o PressKit, lembranças personalizadas e todos os detalhes rigorosamente alinhados ao branding aprovado anteriormente."
   },
   {
