@@ -31,7 +31,7 @@ export default function Footer() {
         <a 
           href="/assets/propostajulia.pdf" 
           download="Proposta_Julia_XV.pdf"
-          className="group flex items-center gap-3 bg-[#a3779d] hover:bg-[#8e6087] text-white px-8 py-4 rounded-full font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-xl active:scale-95 border border-white/10"
+          className="group flex items-center gap-3 bg-[#999999] hover:bg-[#eeeeee] text-white px-8 py-4 rounded-full font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-xl active:scale-95 border border-white/10"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
