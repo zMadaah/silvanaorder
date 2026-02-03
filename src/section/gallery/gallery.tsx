@@ -7,7 +7,7 @@ const items = [
   { title: "DOCES FINOS", src: "/assets/doce.png" },
   { title: "PRESSKIT CONVIDADOS", src: "/assets/kit.jpeg" },
   { title: "CARPETAGEM", src: "/assets/carpete.jpeg" },
-  { title: "CENOGRAFIA", src: "/assets/decoracao.png" },
+  { title: "CENOGRAFIA", src: "/assets/decoracao.PNG" },
   { title: "HALL DE ENTRADA", src: "/assets/hall.jpeg" }
 ];
 
