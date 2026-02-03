@@ -1,6 +1,24 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function PresskitSection() {
+  const [currentImage, setCurrentImage] = useState(0);
+  
+  const images = [
+    { src: "/assets/presskit.png", alt: "Detalhe Presskit" },
+    { src: "/assets/presskit2.jpeg", alt: "Experiência Presskit" }
+  ];
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <section className="relative min-h-screen bg-[#F5F5F5] py-16 md:py-24 px-6 md:px-24 text-[#1A1A1A]">
       <div className="max-w-7xl mx-auto">
@@ -11,45 +29,75 @@ export default function PresskitSection() {
           </h2>
         </header>
 
-        {/* CONTEÚDO PRINCIPAL: Estrutura diferente para mobile vs desktop */}
+        {/* CONTEÚDO PRINCIPAL */}
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-16 mb-16 md:mb-24">
-          {/* DESKTOP: Coluna Esquerda - Carrossel de Imagens (invertemos a ordem) */}
-          <div className="hidden lg:flex flex-col gap-6 w-full order-1 lg:order-1">
-            <div className="relative h-[400px] w-full rounded-[30px] overflow-hidden shadow-2xl border border-black/5">
-              <Image 
-                src="/assets/presskit.png" 
-                alt="Detalhe Presskit"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
-            <div className="relative h-[400px] w-full rounded-[30px] overflow-hidden shadow-2xl border border-black/5">
-              <Image 
-                src="/assets/presskit2.jpeg" 
-                alt="Experiência Presskit"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
-            </div>
+          {/* DESKTOP: Coluna Esquerda - Carrossel de Imagens */}
+          <div className="hidden lg:flex flex-col gap-6 w-full order-1">
+            {images.map((img, index) => (
+              <div key={index} className="relative h-[400px] w-full rounded-[30px] overflow-hidden shadow-2xl border border-black/5">
+                <Image 
+                  src={img.src} 
+                  alt={img.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                />
+              </div>
+            ))}
           </div>
 
-          {/* MOBILE: Imagem única entre título e texto */}
+          {/* MOBILE: Carrossel de Imagens */}
           <div className="lg:hidden mb-8">
             <div className="relative h-[400px] w-full rounded-[30px] overflow-hidden shadow-2xl border border-black/5">
               <Image
-                src="/assets/presskit.png"
-                alt="Detalhe Presskit"
+                src={images[currentImage].src}
+                alt={images[currentImage].alt}
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
+                className="object-cover"
                 sizes="100vw"
+                priority={currentImage === 0}
               />
+            </div>
+            
+            {/* Controles do Carrossel Mobile */}
+            <div className="flex justify-center items-center mt-4 gap-8">
+              <button 
+                onClick={prevImage}
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm border border-black/10 shadow-lg hover:bg-white transition-colors"
+              >
+                <svg className="w-5 h-5 text-black/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              
+              {/* Indicadores */}
+              <div className="flex gap-2">
+                {images.map((_, index) => (
+                  <div
+                    key={index}
+                    className={`w-2 h-2 rounded-full ${index === currentImage ? 'bg-black' : 'bg-black/30'}`}
+                  />
+                ))}
+              </div>
+              
+              <button 
+                onClick={nextImage}
+                className="flex items-center justify-center w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm border border-black/10 shadow-lg hover:bg-white transition-colors"
+              >
+                <svg className="w-5 h-5 text-black/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Contador */}
+            <div className="text-center mt-2 text-sm text-black/60 font-sans">
+              {currentImage + 1} / {images.length}
             </div>
           </div>
 
           {/* DESKTOP & MOBILE: Coluna Direita - Texto */}
-          <div className="space-y-8 z-10 order-2 lg:order-2 text-center lg:text-left">
+          <div className="space-y-8 z-10 order-2 text-center lg:text-left">
             <div className="space-y-6 font-sans">
               <p className="text-lg md:text-xl leading-relaxed opacity-90 text-pretty">
                 As lembranças do evento serão desenvolvidas como uma experiência exclusiva e memorável para os adolescentes. 
