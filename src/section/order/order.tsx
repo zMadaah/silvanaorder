@@ -3,19 +3,6 @@ import Image from 'next/image';
 export default function Order() {
   return (
     <section className="relative min-h-screen bg-[#F3F3F3] py-16 md:py-24 px-6 md:px-24 text-[#1A1A1A] overflow-hidden flex flex-col items-center">
-      
-      {/* CONTAINER DA LOGO: Centralizado no Mobile, Absoluto no Desktop */}
-      <div className="flex justify-center md:justify-end w-full mb-10 md:mb-0 md:absolute md:top-12 md:right-12 z-20">
-        <div className="w-24 md:w-32">
-          <Image 
-            src="/assets/logo.png" 
-            alt="Riquíssimos" 
-            width={110} 
-            height={110}
-            className="object-contain"
-          />
-        </div>
-      </div>
 
       <div className="max-w-4xl mx-auto space-y-12 md:space-y-16">
         

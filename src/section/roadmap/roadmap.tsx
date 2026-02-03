@@ -6,19 +6,6 @@ import Image from "next/image";
 export default function Roadmap() {
   return (
     <section className="relative min-h-screen bg-[#f3f4f6] py-16 md:py-24 px-6 md:px-20 overflow-hidden flex flex-col items-center">
-      
-      {/* CONTAINER DA LOGO: Centralizado no Mobile, Absoluto no Desktop */}
-      <div className="flex justify-center md:justify-end w-full mb-12 md:mb-0 md:absolute md:top-10 md:right-10 z-20">
-        <div className="w-24 md:w-28">
-          <Image 
-            src="/assets/logo.png" 
-            alt="Riquíssimos" 
-            width={90} 
-            height={90} 
-            className="object-contain"
-          />
-        </div>
-      </div>
 
       <div className="max-w-7xl mx-auto w-full">
         {/* CABEÇALHO: Centralizado no Mobile para acompanhar o eixo da logo */}

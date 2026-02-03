@@ -11,15 +11,15 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center bg-[#1A1A1A] text-[#e5e2d9]">
-      
+
       {/* Background de Imagem com Filtro Preto e Branco */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/assets/bg_hero.png" // Substitua pelo caminho correto da sua imagem
+          src="/assets/bg_hero.PNG" // Substitua pelo caminho correto da sua imagem
           alt="Background"
           fill
           priority
-          // className="object-cover grayscale brightness-50" // grayscale transforma em P&B e brightness-50 escurece para dar leitura
+        // className="object-cover grayscale brightness-50" // grayscale transforma em P&B e brightness-50 escurece para dar leitura
         />
       </div>
 
@@ -37,12 +37,27 @@ export default function Hero() {
             />
           </div>
 
-          <button
-            onClick={scrollToInvestment}
-            className="mt-4 bg-[#666666] text-white px-10 py-3 rounded-full font-sans font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] hover:opacity-90 transition-all shadow-lg active:scale-95 border border-white/10"
+          <div className="
+            mt-6 
+            bg-[#666666] 
+            text-white 
+            px-6 md:px-10 
+            py-4 md:py-3 
+            rounded-[20px] md:rounded-full 
+            font-sans font-bold 
+            text-[9px] md:text-xs 
+            uppercase tracking-[0.15em] md:tracking-[0.2em] 
+            hover:opacity-90 
+            transition-all 
+            shadow-lg 
+            active:scale-95 
+            border border-white/10 
+            w-full md:w-auto 
+            max-w-[320px] md:max-w-none 
+            leading-relaxed md:leading-normal"
           >
-            PROPOSTA DOS SONHOS
-          </button>
+            Assinamos e executamos projetos completos, pensados em cada detalhe, do conceito à entrega final.
+          </div>
         </div>
 
         {/* Linha Divisora Vertical */}
@@ -50,7 +65,7 @@ export default function Hero() {
 
         {/* Coluna Direita: Informações do Evento */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-4 w-full md:w-1/2">
-          
+
           <h1 className="font-display italic font-normal text-6xl md:text-8xl lg:text-9xl leading-tight tracking-tighter text-white">
             Aniversário
           </h1>
