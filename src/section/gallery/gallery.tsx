@@ -27,7 +27,9 @@ export default function Gallery() {
 
       <div className="max-w-7xl mx-auto px-6">
         <header className="mb-16 text-center">
-          <h2 className="font-display italic text-6xl md:text-8xl mb-8 tracking-tight">Aniversário Julia</h2>
+          <h2 className="font-display italic text-6xl md:text-8xl mb-8 tracking-tight text-black">
+            Aniversário Julia
+          </h2>
           <p className="max-w-4xl mx-auto font-sans text-base md:text-lg leading-relaxed text-[#333] opacity-90 px-4">
             Criamos cenários onde tudo se conecta. A identidade visual, as flores e a cenografia dialogam entre si para construir uma atmosfera coesa, delicada e marcante. A proposta contempla o evento por completo da concepção criativa à experiência final. Esse olhar integrado valoriza o investimento e garante um resultado sofisticado, luxuoso e com grande impacto visual inesquecível.
           </p>

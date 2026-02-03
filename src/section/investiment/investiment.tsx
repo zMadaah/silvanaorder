@@ -1,6 +1,44 @@
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 
 export default function InvestimentoSection() {
+  const [isMobileValueVisible, setIsMobileValueVisible] = useState(false);
+  const valueCardRef = useRef(null);
+
+  useEffect(() => {
+    // Só executa no mobile
+    if (typeof window === 'undefined' || window.innerWidth >= 768) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // Quando 30% do elemento estiver visível
+          if (entry.intersectionRatio >= 0.3) {
+            setIsMobileValueVisible(true);
+          } else {
+            setIsMobileValueVisible(false);
+          }
+        });
+      },
+      {
+        threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        rootMargin: '0px',
+      }
+    );
+
+    if (valueCardRef.current) {
+      observer.observe(valueCardRef.current);
+    }
+
+    return () => {
+      if (valueCardRef.current) {
+        observer.unobserve(valueCardRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section id="investiment" className="relative min-h-screen bg-[#F5F5F5] py-16 md:py-24 px-6 md:px-24 text-[#1A1A1A] flex flex-col justify-center overflow-hidden">
       
@@ -12,20 +50,44 @@ export default function InvestimentoSection() {
           </h2>
         </div>
 
-        {/* Card de Valor Principal COM EFEITO BLUR NO HOVER */}
-        <div className="relative group max-w-sm md:max-w-lg mx-auto w-full">
+        {/* Card de Valor Principal COM EFEITOS RESPONSIVOS */}
+        <div 
+          ref={valueCardRef}
+          className="relative max-w-sm md:max-w-lg mx-auto w-full"
+        >
           <div className="relative bg-[#222] rounded-full py-6 md:py-8 px-8 md:px-12 text-center border-2 md:border-3 border-[#B89B5E]/20 shadow-lg transition-all duration-500 overflow-hidden">
-            {/* Efeito de blur aplicado no hover */}
-            <div className="transition-all duration-500 group-hover:blur-sm">
-              <span className="font-display font-normal text-3xl sm:text-4xl md:text-5xl text-white tracking-[0.1em] md:tracking-[0.15em] whitespace-nowrap">
-                Valores
-              </span>
+            {/* MOBILE: Valor automático quando visível */}
+            <div className="md:hidden">
+              {/* Estado inicial (antes de aparecer 30%) */}
+              <div className={`transition-all duration-500 ${isMobileValueVisible ? 'opacity-0 blur-sm' : 'opacity-100'}`}>
+                <span className="font-display font-normal text-3xl sm:text-4xl text-white tracking-[0.1em] whitespace-nowrap">
+                  Valores
+                </span>
+              </div>
+              
+              {/* Valor que aparece automaticamente */}
+              <div className={`absolute inset-0 flex items-center justify-center transition-all duration-500 ${isMobileValueVisible ? 'opacity-100' : 'opacity-0'}`}>
+                <span className="font-sans font-bold text-xl text-white/90 tracking-wider italic">
+                  R$ 79.900,00
+                </span>
+              </div>
             </div>
-            {/* Texto que aparece no hover */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-              <span className="font-sans font-bold text-xl md:text-2xl text-white/90 tracking-wider italic">
-                R$ 79.900,00
-              </span>
+
+            {/* DESKTOP: Efeito hover normal */}
+            <div className="hidden md:block group">
+              {/* Texto inicial */}
+              <div className="transition-all duration-500 group-hover:blur-sm">
+                <span className="font-display font-normal text-4xl md:text-5xl text-white tracking-[0.1em] md:tracking-[0.15em] whitespace-nowrap">
+                  Valores
+                </span>
+              </div>
+              
+              {/* Texto que aparece no hover */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <span className="font-sans font-bold text-xl md:text-2xl text-white/90 tracking-wider italic">
+                  R$ 79.900,00
+                </span>
+              </div>
             </div>
           </div>
         </div>

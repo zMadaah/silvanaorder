@@ -3,7 +3,7 @@ import { Step } from "./data";
 
 export function StepCard({ step }: { step: Step }) {
   return (
-    <div className="group relative bg-[#666666] p-8 rounded-[30px] shadow-xl hover:scale-105 transition-all duration-300 border border-white/10 flex flex-col justify-between min-h-[300px]">
+    <div className="group relative bg-[#666666] p-8 rounded-[30px] shadow-xl md:hover:scale-105 transition-all duration-300 border border-white/10 flex flex-col justify-between min-h-[300px]">
       
       {/* Número do Passo em destaque */}
       <div className="absolute top-6 right-8 text-white/20 font-display italic text-5xl group-hover:text-white/40 transition-colors">
@@ -14,7 +14,11 @@ export function StepCard({ step }: { step: Step }) {
         <h3 className="font-display italic text-2xl text-white leading-tight">
           {step.title}
         </h3>
-        <p className="font-sans text-sm text-white/80 leading-relaxed line-clamp-4 group-hover:line-clamp-none transition-all">
+        
+        {/* Ajuste do texto: line-clamp removido no mobile para leitura total */}
+        <p className="font-sans text-sm md:text-base text-white/90 leading-relaxed 
+                      line-clamp-none md:line-clamp-4 md:group-hover:line-clamp-none 
+                      transition-all duration-500">
           {step.content}
         </p>
       </div>

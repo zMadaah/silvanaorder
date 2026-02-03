@@ -13,12 +13,12 @@ export const steps: Step[] = [
   },
   {
     number: 2,
-    title: "Sincronização e Acesso VIP",
+    title: "Sincronização e Acesso",
     content: "O acesso ao iPad não é automático para garantir a segurança dos seus dados. A Direção da Riquíssimos Produções enviará pessoalmente o seu Login e Senha exclusivos, permitindo que você explore o cronograma e os detalhes do projeto."
   },
   {
     number: 3,
-    title: "O Branding ",
+    title: "Branding ",
     content: "Desenvolvimento da marca exclusiva da festa. Aqui criamos o monograma, selecionamos a tipografia e definimos toda a identidade visual que estará presente em todos os materiais, desde os convites até a pista de dança."
   },
   {
